@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>notMNIST</title>
+  <meta name="viewport" content="width=device-width">
+  <style>
+    #container {
+      display: flex;
+    }
+
+    #predict td.score-bar {
+      min-width: 100px;
+    }
+
+    #predict .bar {
+      background: red;
+      width: 0;
+    }
+
+    .loading #container {
+      visibility: hidden;
+    }
+
+    .progress {
+      display: none;
+      font-family: monospace;
+    }
+
+    .loading .progress {
+      display: block;
+    }
+
+    #canvas-container,
+    #canvas-input {
+      border: 1px solid #333;
+    }
+
+    #predict {
+      font-family: monospace;
+    }
+
+    #predict .score {
+      white-space: pre-wrap;
+    }
+
+    #canvas-container {
+      position: relative;
+      margin-right: 20px;
+      margin-bottom: 20px;
+    }
+
+    #canvas-safearea {
+      position: absolute;
+      border: 30px solid #EEE;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1000;
+    }
+  </style>
+</head>
+
+<body class="loading">
+  <h1>notMNIST</h1>
+  <div class="progress">Loading...</div>
+  <div id="container">
+    <section>
+      <div id="canvas-container">
+        <canvas id="canvas"></canvas>
+        <div id="canvas-safearea"></div>
+      </div>
+      <canvas id="canvas-input"></canvas>
+      <button type="button" id="clear-canvas">Clear</button>
+    </section>
+    <section>
+      <table id="predict">
+        <tbody>
+          <tr>
+            <td>A</td>
+            <td class="score"></td>
+            <td class="score-bar">
+              <div class="bar">&nbsp;</div>
+            </td>
+          </tr>
+          <tr>
+            <td>B</td>
+            <td class="score"></td>
+            <td class="score-bar">
+              <div class="bar">&nbsp;</div>
+            </td>
+          </tr>
+          <tr>
+            <td>C</td>
+            <td class="score"></td>
+            <td class="score-bar">
+              <div class="bar">&nbsp;</div>
+            </td>
+          </tr>
+          <tr>
+            <td>D</td>
+            <td class="score"></td>
+            <td class="score-bar">
+              <div class="bar">&nbsp;</div>
+            </td>
+          </tr>
+          <tr>
+            <td>E</td>
+            <td class="score"></td>
+            <td class="score-bar">
+              <div class="bar">&nbsp;</div>
+            </td>
+          </tr>
+          <tr>
+            <td>F</td>
+            <td class="score"></td>
+            <td class="score-bar">
+              <div class="bar">&nbsp;</div>
+            </td>
+          </tr>
+          <tr>
+            <td>G</td>
+            <td class="score"></td>
+            <td class="score-bar">
+              <div class="bar">&nbsp;</div>
+            </td>
+          </tr>
+          <tr>
+            <td>H</td>
+            <td class="score"></td>
+            <td class="score-bar">
+              <div class="bar">&nbsp;</div>
+            </td>
+          </tr>
+          <tr>
+            <td>I</td>
+            <td class="score"></td>
+            <td class="score-bar">
+              <div class="bar">&nbsp;</div>
+            </td>
+          </tr>
+          <tr>
+            <td>J</td>
+            <td class="score"></td>
+            <td class="score-bar">
+              <div class="bar">&nbsp;</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+</body>
+
+</html>
